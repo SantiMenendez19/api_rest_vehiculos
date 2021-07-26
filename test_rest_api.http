@@ -1,0 +1,80 @@
+### Todos los vehiculos
+GET http://localhost:9000/vehiculos
+
+### Id existente
+
+GET http://localhost:9000/vehiculos/find/60ff1f9a56f7df2fe842c734
+
+### Id no existente
+
+GET http://localhost:9000/vehiculos/find/60fde943333a62c83ca5300
+
+### Busqueda de vehiculo por filtro
+
+GET http://localhost:9000/vehiculos/find?marca=Ford&modelo=Fiesta&anio=2005
+
+### Busqueda por filtro id
+
+GET http://localhost:9000/vehiculos/find?id=60ff1f9a56f7df2fe842c734
+
+### Agregar vehiculo
+
+POST http://localhost:9000/vehiculos
+Content-Type: application/json
+
+{
+    "marca": "Ford",
+    "modelo" : "Fiesta",
+    "anio": 2005,
+    "vendido" : false
+}
+
+###
+
+POST http://localhost:9000/vehiculos
+Content-Type: application/json
+
+{
+    "marca": "Renault",
+    "modelo" : "Meganne",
+    "anio": 2020,
+    "vendido" : true
+}
+
+### Eliminar Vehiculo por ID
+
+DELETE http://localhost:9000/vehiculos/60fe0708014e920dbc49e95d
+
+### Actualizar datos del Vehiculo
+
+PUT http://localhost:9000/vehiculos/60fdf94aad9d1137f8342e58
+Content-Type: application/json
+
+{
+    "marca": "Renaulto",
+    "modelo" : "Meganneo",
+    "anio": 2021,
+    "vendido" : true
+}
+
+### Actualizo solo un dato
+
+PUT http://localhost:9000/vehiculos/60fdf94aad9d1137f8342e58
+Content-Type: application/json
+
+{
+    "marca": "Renault",
+    "modelo" : "Meganne"
+}
+
+### Actualizo el document completo
+
+PATCH http://localhost:9000/vehiculos/60ff1c2f3218732a50b98aba
+Content-Type: application/json
+
+{
+    "marca": "BMW",
+    "modelo" : "M3",
+    "anio": 2005,
+    "vendido" : false
+}
