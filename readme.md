@@ -4,7 +4,7 @@ Ejercicio de API Rest de vehiculos hecho con NodeJS y MongoDB
 
 ## Link de heroku
 
-El link de la API Rest en heroku es: <link pendiente>
+El link de la API Rest en heroku es: https://api-rest-vehiculos-smenendez.herokuapp.com/vehiculos
 
 ## Modulos utilizados
 
